@@ -1,23 +1,12 @@
-* {
-  font-family: sans-serif;
-}
-input,
-button {
-  font-size: 20px;
+
+
+.container{
+  text-align: center;
+  color:azure;
+  height:50vh;
+  width:auto;
+  background-color: rgb(195, 122, 122);
+  margin:0;
+  clip-path: ellipse(130% 90% at 40% 5%);
   padding: 10px;
-  border-radius: 5px;
-}
-input {
-  display: block;
-  margin-bottom: 20px;
-}
-button {
-  border: 1px solid gray;
-  background: whitesmoke;
-  margin-right: 5px;
-}
-button:nth-last-child(2),
-button:nth-last-child(1) {
-  background: tomato;
-  color: white;
 }
