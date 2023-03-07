@@ -1,7 +1,12 @@
 import React,{useEffect,useState,useRef} from 'react'
 import './App.css'
 import axios from 'axios'
+import {useSelector,useDispatch} from 'react-redux'
+import {addBy} from './redux/features/sample'
+
 const App = () => {
+  const {player}=useSelector((state)=>state.player)
+  const dispatch=useDispatch()
   const inputRef=useRef(null)
   const [count,setCount]=useState(0)
   const [name,setName]=useState('')
@@ -54,7 +59,10 @@ const App = () => {
       <input type='text' name="firstName" value={name} onChange={(e)=>setName(e.target.value)}/>
       <input type='file' onChange={handleFileChange}/>
       <button onClick={()=>{Submit()}}>
-        Magic
+        Magic {player}
+      </button>
+      <button onClick={()=>dispatch(addBy(2))}>
+         Addplayer
       </button>
     </div>
    
