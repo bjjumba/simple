@@ -3,6 +3,7 @@ import './App.css'
 import axios from 'axios'
 import {useSelector,useDispatch} from 'react-redux'
 import {addBy, getData} from './redux/features/sample'
+import Button from './components/Button'
 
 const App = () => {
   const {player}=useSelector((state)=>state.player)
