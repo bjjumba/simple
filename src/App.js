@@ -2,7 +2,7 @@ import React,{useEffect,useState,useRef} from 'react'
 import './App.css'
 import axios from 'axios'
 import {useSelector,useDispatch} from 'react-redux'
-import {addBy} from './redux/features/sample'
+import {addBy, getData} from './redux/features/sample'
 
 const App = () => {
   const {player}=useSelector((state)=>state.player)
@@ -44,6 +44,9 @@ const App = () => {
 
   }
   //handle file Change
+  useEffect(()=>{
+    dispatch(getData(2))
+  },[])
 
   const handleFileChange = (e) => {
     const img = {
